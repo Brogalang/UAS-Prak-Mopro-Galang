@@ -1,2 +1,5 @@
-#UAS-Prak-Mopro-Galang
-#tambahan = hanya icon logo dan memperbaiki beberapa bug
+-----UAS-Prak-Mopro-Galang------
+-----1167050071 Galang Satria Wibowo------
+- Memperbaiki bug
+- Mengganti logo
+- Fitur jadi lebih lengkap
