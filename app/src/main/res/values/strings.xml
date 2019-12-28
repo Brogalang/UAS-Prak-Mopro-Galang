@@ -1,3 +1,10 @@
 <resources>
-    <string name="app_name">UAS-Prak_Mopro_Galang</string>
+    <string name="app_name">Restaurant UAS Galang</string>
+    <string name="login_name">Restaurant\nUas Galang</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="login">Masuk</string>
+    <string name="belum">Belum Memiliki Akun ?</string>
+    <string name="register">Daftar</string>
+    <string name="masuk"><u>Masuk</u></string>
 </resources>

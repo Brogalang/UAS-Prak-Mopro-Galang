@@ -42,22 +42,21 @@ public class ProfileActivity extends AppCompatActivity {
         AndroidNetworking.get(Constans.GET_PROFIL_USER + "/" +
                 session.getUserId())
                 .build()
-                .getAsObject(LoginResponse.class, new
-                        ParsedRequestListener() {
-                            @Override
-                            public void onResponse(Object response) {
-                                progressDialog.dismiss();
-                                if (((LoginResponse) response).getLogin() != null)
-                                {
-                                    loadDataRes(((LoginResponse) response));
-                                }
-                            }
-                            @Override
-                            public void onError(ANError anError) {
-                                progressDialog.dismiss();
-                                Toast.makeText(ProfileActivity.this, "Failed to fetch data", Toast.LENGTH_SHORT).show();
-                            }
-                        });
+                .getAsObject(LoginResponse.class, new ParsedRequestListener() {
+                    @Override
+                    public void onResponse(Object response) {
+                        progressDialog.dismiss();
+                        if (((LoginResponse) response).getLogin() != null)
+                        {
+                            loadDataRes(((LoginResponse) response));
+                        }
+                    }
+                    @Override
+                    public void onError(ANError anError) {
+                        progressDialog.dismiss();
+                        Toast.makeText(ProfileActivity.this, "Failed to fetch data", Toast.LENGTH_SHORT).show();
+                    }
+                });
     }
     private void loadDataRes(LoginResponse response) {
         nama.setText(response.getLogin().getNama());
@@ -77,12 +76,10 @@ public class ProfileActivity extends AppCompatActivity {
         btnChange.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new
-                        Intent(ProfileActivity.this,ChangePasswordActivity.class);
+                Intent i = new Intent(ProfileActivity.this,ChangePasswordActivity.class);
                 i.putExtra("nama",nama.getText().toString());
                 startActivity(i);
             }
         });
     }
 }
-
